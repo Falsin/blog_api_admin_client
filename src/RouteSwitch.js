@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import App from "./App";
 import Authentication from "./routes/AuthRoute";
 import HomePage from "./routes/home/Home";
@@ -49,14 +49,14 @@ const RouteSwitch = () => {
 
   return (
     <CredentialContext.Provider value={context}>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path='/' element={<App />} />
           <Route path='/sign-up' element={<Authentication link={serverLink} setParentState={[credentials, setCredentials]} />} />
           <Route path='/home' element={<HomePage state={credentials} />} />
           <Route path="login" element={<Login />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </CredentialContext.Provider>
   )
 }
