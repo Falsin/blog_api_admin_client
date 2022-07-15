@@ -53,10 +53,10 @@ function AuthorizedUser() {
   )
 }
 
-function UnauthorizedUser(params) {
+function UnauthorizedUser() {
   return (
     <div className="userBlock">
-      <a href="/login">Log In</a>
+      <a href="login">Log In</a>
     </div>
   )
 }
