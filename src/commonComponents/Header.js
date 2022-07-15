@@ -1,6 +1,7 @@
 import CredentialContext from "../credentialsContext";
 import styled from 'styled-components';
 import makeRequest from 'make-request-to-server';
+import { Link } from "react-router-dom";
 
 const Header = styled(styledHeader)`
   display: flex;
@@ -56,7 +57,8 @@ function AuthorizedUser() {
 function UnauthorizedUser() {
   return (
     <div className="userBlock">
-      <a href="login">Log In</a>
+      {/* <a href="login">Log In</a> */}
+      <Link to='/login'>Log In</Link>
     </div>
   )
 }

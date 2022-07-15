@@ -5,8 +5,7 @@ import { Link } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      {/* <Link to='home'>Home3</Link> */}
-      <a href='/home'>Home5</a>
+      <Link to='/home'>Home</Link>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
