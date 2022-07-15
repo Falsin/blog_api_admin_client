@@ -15,7 +15,7 @@ function CommentsBlock({post, serverLink}) {
     let request = await fetch(serverLink + `/comment/${post._id}`, {
       credentials: 'include',
     })
-    console.log(post)
+
     request = await request.json();
     setCommentsArray(request)
   }
